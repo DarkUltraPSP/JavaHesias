@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  mysql_anime_list:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_DATABASE=anime_list
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - 3307:3306
+  pma_anime_list:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - 8086:80
+    links:
+      - mysql_anime_list:mysql_anime_list
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: root
+      PMA_ARBITRARY: 1
+      PMA_HOST: mysql_anime_list
