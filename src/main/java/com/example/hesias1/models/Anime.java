@@ -14,9 +14,6 @@ public class Anime extends Media {
     @Column
     private Double duration;
 
-    public Anime(UUID id, String title, Date debutDate, Date endDate, String description, String cover, Double duration, int episodes) {
-    }
-
     public Anime(UUID id, String title, String debutDate, String endDate, String description, String cover, int episodes, Double duration) {
         super(id, title, debutDate, endDate, description, cover);
         this.episodes = episodes;
@@ -24,7 +21,7 @@ public class Anime extends Media {
     }
 
     public Anime() {
-
+        super();
     }
 
     public Double getDuration() {

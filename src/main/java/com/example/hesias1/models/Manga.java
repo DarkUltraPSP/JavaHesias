@@ -1,6 +1,5 @@
 package com.example.hesias1.models;
 import javax.persistence.*;
-import java.util.Date;
 import java.util.UUID;
 
 @Entity
@@ -17,10 +16,6 @@ public class Manga extends Media {
         super(id, title, debutDate, endDate, description, cover);
         this.chapters = chapters;
         this.volumes = volumes;
-    }
-
-    public Manga() {
-
     }
 
     public int getChapters() {

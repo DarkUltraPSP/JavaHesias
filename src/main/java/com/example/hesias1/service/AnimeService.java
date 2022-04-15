@@ -5,12 +5,14 @@ import com.example.hesias1.repositories.AnimeRepository;
 import com.example.hesias1.service.converter.entity.AnimeDTOConverter;
 import com.example.hesias1.service.dto.AnimeDTO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 
-public class AnimeService extends GenerateCRUD <Anime, AnimeDTO, Integer> {
+@Service
+public class AnimeService extends GenericCRUDService<Anime, AnimeDTO, Integer> {
     @Autowired
     private final AnimeRepository animeRepo;
     @Autowired

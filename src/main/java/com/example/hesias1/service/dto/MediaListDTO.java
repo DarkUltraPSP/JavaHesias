@@ -7,7 +7,7 @@ public class MediaListDTO {
     private int mark;
     private Date date;
     private UserDTO userDTO;
-    private MediaListDTO mediaListDTO;
+    private MediaDTO mediaDTO;
 
     public MediaListDTO() {
     }
@@ -44,11 +44,11 @@ public class MediaListDTO {
         this.userDTO = userDTO;
     }
 
-    public MediaListDTO getMediaListDTO() {
-        return mediaListDTO;
+    public MediaDTO getMediaDTO() {
+        return mediaDTO;
     }
 
-    public void setMediaListDTO(MediaListDTO mediaListDTO) {
-        this.mediaListDTO = mediaListDTO;
+    public void setMediaDTO(MediaDTO mediaDTO) {
+        this.mediaDTO = mediaDTO;
     }
 }

@@ -3,9 +3,11 @@ package com.example.hesias1.service.converter.entity;
 import com.example.hesias1.models.Category;
 import com.example.hesias1.service.dto.CategoryDTO;
 import org.springframework.beans.BeanUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
 public class CategoryDTOConverter implements EntityDtoConverter <Category, CategoryDTO>{
     @Override
     public Category dtoToEntity(CategoryDTO catDTO) {

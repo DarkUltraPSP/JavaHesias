@@ -1,6 +1,5 @@
 package com.example.hesias1.service.dto;
 
-import java.util.List;
 import java.util.UUID;
 
 public class MediaDTO {
@@ -10,7 +9,9 @@ public class MediaDTO {
     private String endDate;
     private String description;
     private String cover;
-    private List categories;
+
+    public MediaDTO() {
+    }
 
     public UUID getId() {
         return id;
@@ -58,13 +59,5 @@ public class MediaDTO {
 
     public void setCover(String cover) {
         this.cover = cover;
-    }
-
-    public List getCategories() {
-        return categories;
-    }
-
-    public void setCategories(List categories) {
-        this.categories = categories;
     }
 }

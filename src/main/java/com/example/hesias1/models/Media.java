@@ -20,16 +20,16 @@ public class Media {
     private String debutDate;
     @Column
     private String endDate;
-    @Column
+    @Column(length = 2000)
     private String description;
-    @Column
+    @Column(length = 2000)
     private String cover;
 
     @JoinColumn(name = "categories")
     @OneToMany(fetch = FetchType.LAZY)
     private List<Category> categories;
 
-    protected Media() {
+    public Media() {
     }
 
     public Media(UUID id, String title, String debutDate, String endDate, String description, String cover) {
@@ -39,6 +39,9 @@ public class Media {
         this.endDate = endDate;
         this.description = description;
         this.cover = cover;
+    }
+
+    public Media(UUID id) {
     }
 
     public UUID getId() {

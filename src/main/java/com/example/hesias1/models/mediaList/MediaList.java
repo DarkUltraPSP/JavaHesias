@@ -36,7 +36,7 @@ public class MediaList {
         this.date = new Date(Instant.now().getNano());
     }
 
-    protected MediaList() {
+    public MediaList() {
 
     }
 

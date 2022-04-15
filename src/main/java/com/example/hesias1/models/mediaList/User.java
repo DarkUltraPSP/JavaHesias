@@ -17,13 +17,13 @@ public class User {
     @Column
     private String mail;
 
-    public User(UUID id, String name, String mail) {
+    public User(UUID id) {
         this.id = id;
         this.name = name;
         this.mail = mail;
     }
 
-    public User(String name, String mail) {
+    public User(UUID id, String name, String mail) {
         this.id = new UUID(0L,0L);
         this.name = name;
         this.mail = mail;
